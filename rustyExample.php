@@ -1,4 +1,7 @@
  <html>
+ <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+ </head>
  <body>
  This text right here (or any HTML I want to write)
  will show up just before the PHP code stuff.
@@ -13,10 +16,14 @@
  $v = true ;
  $cars = array("Ford","Toyota","VW");
  
+ echo "<div class='menu'>";
+ include 'menu.php';
+ echo "</div>";
+ 
  //greeting
  date_default_timezone_set('Greenwich');
  $date = date('H:i:s a', time());
- if ($t < "20") {
+ if ($t < "16") {
  	echo "<h2>It's still day time! Currently: $date</h2>";
  }
  
@@ -74,9 +81,7 @@
  /* This next "phpinfo" business outputs exactly
   how your version of PHP is configured.
  */
-
- phpinfo();
-
+ include 'footer.php';
  ?>
  </p>
  </body>
